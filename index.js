@@ -5,7 +5,6 @@ let timer = 0;
 
 function setDate() {
   let date = document.getElementById("choose-day").value;
-  console.log(date);
   if (date === "") {
     alert("You did not enter anything!!!");
     resetTimer();
