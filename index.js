@@ -1,54 +1,62 @@
 document.getElementById("set-btn").addEventListener("click", setDate);
 document.getElementById("reset-btn").addEventListener("click", resetTimer);
 let count = 0;
-let timer;
+let timer = 0;
+
 function setDate() {
-  if (count > 0) {
+  let date = document.getElementById("choose-day").value;
+  console.log(date);
+  if (date === "") {
+    alert("You did not enter anything!!!");
     resetTimer();
-    count = 0;
-  }
-  count++;
-  const date = document.getElementById("choose-day").value;
-  document.getElementById("choose-day").value = "";
-  const BirthDayCountDown = new Date(date).getTime();
+  } else {
+    let BirthDayCountDown = new Date(date).getTime();
+    document.getElementById("choose-day").value = "";
 
-  timer = setInterval(function () {
-    const dateNow = new Date().getTime();
-    const distance = BirthDayCountDown - dateNow;
-
-    let month = Math.trunc(distance / (1000 * 60 * 60 * 24 * 30.5));
-    let weeks = Math.trunc(distance / (1000 * 60 * 60 * 24 * 7));
-    let days = Math.trunc(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.trunc(
-      (distance % (100 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    let minutes = Math.trunc((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.trunc((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("count-months").textContent = month;
-    document.getElementById("count-weeks").textContent = weeks;
-    document.getElementById("count-days").textContent = days;
-    document.getElementById("count-hours").textContent = hours;
-    document.getElementById("count-minutes").textContent = minutes;
-    document.getElementById("count-seconds").textContent = seconds;
-
-    if (distance < 0) {
+    if (count > 0) {
       resetTimer();
+      count = 0;
     }
-  }, 1000);
+    count++;
+
+    timer = setInterval(function () {
+      const dateNow = new Date().getTime();
+      const distance = BirthDayCountDown - dateNow;
+
+      let month = Math.trunc(distance / (1000 * 60 * 60 * 24 * 30.5));
+      let weeks = Math.trunc(distance / (1000 * 60 * 60 * 24 * 7));
+      let days = Math.trunc(distance / (1000 * 60 * 60 * 24));
+      let hours = Math.trunc(
+        (distance % (100 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      let minutes = Math.trunc((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.trunc((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("count-months").innerHTML = month;
+      document.getElementById("count-weeks").innerHTML = weeks;
+      document.getElementById("count-days").innerHTML = days;
+      document.getElementById("count-hours").innerHTML = hours;
+      document.getElementById("count-minutes").innerHTML = minutes;
+      document.getElementById("count-seconds").innerHTML = seconds;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        resetTimer();
+      }
+    }, 1000);
+  }
 }
 
-// const BirthDayCountDown = new Date(`Aug 11, ${year}`).getTime();
-
 function resetTimer() {
-  if (timer !== undefined) {
-    clearInterval(timer);
-  }
+  clearInterval(timer);
+  timer = 0;
   document.getElementById("choose-day").value = "";
-  document.getElementById("count-months").textContent = 0;
-  document.getElementById("count-weeks").textContent = 0;
-  document.getElementById("count-days").textContent = 0;
-  document.getElementById("count-hours").textContent = 0;
-  document.getElementById("count-minutes").textContent = 0;
-  document.getElementById("count-seconds").textContent = 0;
+
+  document.getElementById("count-months").innerHTML = 0;
+
+  document.getElementById("count-weeks").innerHTML = 0;
+  document.getElementById("count-days").innerHTML = 0;
+  document.getElementById("count-hours").innerHTML = 0;
+  document.getElementById("count-minutes").innerHTML = 0;
+  document.getElementById("count-seconds").innerHTML = 0;
 }
