@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Countdown Timer</title>
+  </head>
+  <body>
+  <header>
+    <h1>Until Your Date 🥳🎉</h1>
+    <div>
+      <h3>Choose your date</h3>
+      <input type="datetime-local" name="" id="choose-day">
+      <button id="set-btn">Set</button>
+      <button id="reset-btn">Reset</button>
+    </div>
+  </header>
+
+  <section>
+    <main>
+        <article id="months">
+          <span id="count-months">0</span>
+          <p id="month">Month</p>
+        </article>
+
+        <article>
+          <span class="colon">:</span>
+        </article>
+
+        <article id="weeks">
+          <span id="count-weeks">0</span>
+          <p id="weeks">Weeks</p>
+        </article>
+
+        <article>
+          <span class="colon">:</span>
+        </article>
+
+        <article id="days">
+          <span id="count-days">0</span>
+          <p id="days">Days</p>
+        </article>
+
+        <article>
+          <span class="colon">:</span>
+        </article>
+
+        <article id="hours">
+          <span id="count-hours">0</span>
+          <p id="hours">Hours</p>
+        </article>
+
+        <article>
+          <span class="colon">:</span>
+        </article>
+
+        <article id="minutes">
+          <span id="count-minutes">0</span>
+          <p id="minutes">Minutes</p>
+        </article>
+
+        <article>
+          <span class="colon">:</span>
+        </article>
+
+        <article id="seconds">
+          <span id="count-seconds">0</span>
+          <p id="seconds">Seconds</p>
+        </article>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

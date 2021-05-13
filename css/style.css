@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("https://source.unsplash.com/1600x900/?nature,cool,coffee");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Kanit", sans-serif;
+}
+header {
+  display: flex;
+  margin: 60px auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 63px;
+  color: rgb(255, 255, 255);
+  text-shadow: 8px 0px 3px rgb(0, 0, 0);
+}
+h3 {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  text-shadow: 8px 0px 3px rgb(0, 0, 0);
+}
+
+#set-btn,
+#reset-btn {
+  outline: none;
+  border: none;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  background: rgb(126 217 245);
+  cursor: pointer;
+}
+#reset-btn {
+  background: rgb(245 117 26);
+}
+#reset-btn:hover {
+  background: rgb(226 80 47);
+}
+#set-btn:hover {
+  background: rgb(33 165 206);
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  display: flex;
+  width: 76vw;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+section {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0px auto;
+  box-shadow: 1px 1px 13px 2px rgb(126 217 245);
+  border-radius: 5px;
+  width: 79vw;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+span {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 55px;
+  font-weight: bold;
+  padding: 5px;
+  text-shadow: 5px 2px 2px rgb(0, 161, 255);
+  color: rgb(54, 54, 167);
+}
+
+p {
+  font-size: 26px;
+  font-weight: bold;
+  /* color: rgb(50, 183, 41); */
+  /* text-shadow: 5px 2px 2px rgb(18, 18, 19); */
+  color: rgb(255, 255, 255);
+  text-shadow: 8px 0px 3px rgb(0, 0, 0);
+}
