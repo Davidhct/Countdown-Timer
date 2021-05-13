@@ -17,4 +17,4 @@ Countdown Timer application is a single page application (SPA) that allows you t
 - I used, random background from the site: https://source.unsplash.com/ <br><br>
 
 <kbd><img src="/demo images/img_1.png" width="630" height="350"></kbd>
-<kbd><img src="/demo images/img_1.png" width="630" height="350"></kbd>
+<kbd><img src="/demo images/img_2.png" width="630" height="350"></kbd>
